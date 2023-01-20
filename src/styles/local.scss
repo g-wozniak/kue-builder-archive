@@ -1,0 +1,20 @@
+@font-face {
+   font-family: 'Kue';
+   src: url('/assets/fonts/kue-bold.woff') format('woff'),
+   url('/assets/fonts/kue-bold.woff2') format('woff2'),
+   url('/assets/fonts/kue-bold.eot') format('eot');
+   font-weight: 600;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Kue';
+   src: url('/assets/fonts/kue-regular.woff') format('woff'),
+   url('/assets/fonts/kue-regular.woff2') format('woff2'),
+   url('/assets/fonts/kue-regular.eot') format('eot');
+   font-weight: 400;
+   font-style: normal;
+}
+
+@import "build.scss";
+@import "preview.scss";

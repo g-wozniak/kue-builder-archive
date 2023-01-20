@@ -1,0 +1,19 @@
+#kue-builder .--kue-bs {
+   width: $UI_FIXED_SIDEBAR_WIDTH;
+   padding: 0 $U;
+   border-right: 1px solid $UI_THEME_LAYER_1_BORDER;
+   background: $UI_THEME_LAYER_1;
+
+   &-panel {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      >.--kue-bs-frame:last-child {
+         flex-grow: 1;
+         overflow: auto;
+         border-radius: $U $U 0 0;
+         border-bottom: none;
+      }
+   }
+}

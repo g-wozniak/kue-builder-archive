@@ -1,0 +1,62 @@
+#kue-builder {
+
+  .--form-inverted .--kue-b-rich-textbox {
+    input {
+      @include UI_Input_Frame_Inverted();
+      font-size: .85em;
+    }
+    .icon {
+      color: $UI_BRAND_GLACIER;
+    }
+    input:focus::placeholder {
+      color: $UI_BRAND_SNOW;
+    }
+    input::placeholder {
+      color: $UI_BRAND_GLACIER;
+    }
+  }
+
+  .--kue-b-rich-textbox {
+
+    input {
+      @include UI_Input_Font(100%);
+      @include UI_Input_Frame();
+    }
+
+    &.right.labeled {
+      input {
+        border-right-color: $UI_THEME_INPUT_BORDER !important;
+        border-radius: $u !important;
+      }
+      i.icon {
+        filter: invert(1);
+      }
+    }
+
+    i.icon {
+      font-size: .8em;
+      color: $UI_THEME_ICON_DEFAULT;
+    }
+
+    .ui.basic.label:not(.corner) {
+      @include UI_Font(secondary, bold);
+      color: $UI_COLOR_PRIMARY;
+      font-size: .85em;
+      padding-top: 12px;
+      line-height: 100%;
+      border: none;
+      background: transparent;
+    }
+
+    .ui.label.corner {
+      border-color: $UI_BRAND_STORM;
+      font-size: 0.5em;
+
+      > i {
+        color: $UI_THEME_LAYER_0_SHADOW;
+        font-size: 0.8em;
+      }
+    }
+  }
+
+}

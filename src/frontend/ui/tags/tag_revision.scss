@@ -1,0 +1,35 @@
+#kue-builder .--never-published .--kue-b-tag.--revision {
+  background: $UI_THEME_LAYER_5_ICON;
+}
+
+#kue-builder .--as-published .--kue-b-tag.--revision,
+#kue-builder .--as-published.--no-changes .--kue-b-tag.--revision{
+  background: $UI_COLOR_REVISION_PUBLISHED;
+}
+
+#kue-builder .--with-changes .--kue-b-tag.--revision {
+  background: $UI_COLOR_REVISION_BRANCHED_CHANGED;
+  span {
+    @include UI_Font(primary, strong);
+  }
+}
+
+#kue-builder .--no-changes .--kue-b-tag.--revision {
+  background: $UI_COLOR_REVISION_BRANCHED_NO_CHANGES;
+}
+
+
+#kue-builder .--kue-b-tag {
+
+  &.--revision {
+    background: yellow;
+    padding: 5px 8px;
+
+    span {
+      @include UI_Font(primary, normal);
+      font-size: 0.8em;
+      color: $UI_BRAND_SNOW;
+    }
+  }
+
+}

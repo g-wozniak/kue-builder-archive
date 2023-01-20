@@ -1,0 +1,39 @@
+#kue-builder {
+
+  .--kue-b-dropdown {
+    @include UI_Input_Font(100%);
+    @include UI_Input_Frame();
+    position: relative;
+    background: $UI_THEME_LAYER_5;
+    padding: $u_ !important;
+    margin-bottom: $u;
+
+    .visible.menu {
+      border-left: 1px solid $UI_THEME_INPUT_BORDER;
+      border-right: 1px solid $UI_THEME_INPUT_BORDER;
+      border-bottom: 1px solid $UI_THEME_INPUT_BORDER;
+    }
+
+    .item {
+      color: $UI_COLOR_PRIMARY;
+      border-top: 1px solid $UI_THEME_INPUT_BORDER;
+      padding: $u_ !important;
+
+      &:hover, &:focus {
+        background: $UI_THEME_LAYER_4;
+      }
+
+      &.active.selected {
+        color: $UI_COLOR_PRIMARY;
+        background: $UI_BRAND_GLACIER;
+      }
+      .text {
+        @include UI_Font(monospace, normal);
+        line-height: 100%;
+        font-size: .85em;
+        color: $UI_COLOR_PRIMARY;
+      }
+    }
+  }
+
+}

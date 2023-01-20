@@ -1,0 +1,31 @@
+/*== app.scss ==*/
+/* This is the stylesheet for local build preview only */
+
+body, html {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+#app {
+  min-width: 1400px;
+  width: 100%;
+  height: 100%;
+}
+
+.transition .controls {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 10;
+  font-size: 12px;
+}
+
+.transition .controls button + button {
+  margin-left: 10px;
+}

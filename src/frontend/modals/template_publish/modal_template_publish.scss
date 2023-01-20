@@ -1,0 +1,10 @@
+#kue-builder .--kue-modal.--kue-modal-template-publishing {
+  top: 100px;
+  left: calc($UI_FIXED_SIDEBAR_WIDTH - 16px);
+  width: 300px;
+
+  .--hint {
+    display: block;
+    margin-bottom: $u;
+  }
+}

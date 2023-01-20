@@ -1,0 +1,79 @@
+
+#kue-builder {
+  $blockPadding: $u_ $U;
+
+  .--kue-bb {
+    @include UI_Gradient(180deg, $UI_THEME_BUILDER_CARD_TOP, $UI_THEME_BUILDER_CARD_BOTTOM);
+    border: 1px solid $UI_THEME_BUILDER_CARD_BORDER;
+    box-shadow: 3px 3px 0 $UI_THEME_LAYER_0_SHADOW;
+    border-radius: $UU;
+    padding: $UU;
+    cursor: pointer;
+    width: 360px;
+    min-height: 200px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+    z-index: 5;
+
+    &.--selected {
+      cursor: grab;
+    }
+
+    &-header {
+      margin: 0;
+      align-items: center;
+      display: flex;
+      justify-content: flex-start;
+
+
+      .--title {
+        @include UI_Font(primary, strong);
+        text-shadow: 2px 2px 0 $UI_THEME_LAYER_5;
+        color: $UI_THEME_TEXT_SECONDARY;
+        font-size: 1.4em;
+        line-height: 115%;
+        margin-bottom: 0;
+      }
+
+      .--icon {
+        // @include UI_Frame();
+        // @include UI_Gradient(0deg, $UI_THEME_LAYER_4, $UI_THEME_LAYER_3);
+        border-radius: 50%;
+        width: 52px;
+        height: 52px;
+        margin-right: $U;
+        // border: 1px solid $UI_THEME_LAYER_2;
+        position: relative;
+
+        > svg {
+          position: absolute;
+          color: $UI_COLOR_PRIMARY;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          height: 28px;
+          filter: drop-shadow(2px 2px 0px $UI_THEME_LAYER_2);
+        }
+      }
+
+    }
+
+    &-body {
+      padding: $Uu;
+
+      .--text {
+        @include UI_Font(primary, normal);
+        color: $UI_THEME_TEXT_HIGHLIGHT;
+        font-size: 1.1em;
+      }
+    }
+  }
+
+}
+
+@import "layouts/card_layout";
+@import "widgets/card_widgets";
+@import "card_branding";

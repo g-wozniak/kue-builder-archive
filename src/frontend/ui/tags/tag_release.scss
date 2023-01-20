@@ -1,0 +1,14 @@
+#kue-builder .--kue-b-tag {
+
+  &.--release {
+    background: #0074D9;
+    color: #fff;
+
+    svg {
+      font-size: 1em;
+      padding-left: 6px;
+      padding-right: 4px;
+    }
+  }
+
+}

@@ -1,0 +1,13 @@
+#kue-builder .--kue-modal {
+  width: 275px;
+  top: 0;
+  left: 52px;
+  position: absolute;
+  z-index: 100;
+}
+
+/* Specific modal CSS */
+@import "new_card/modal_new_card";
+@import "new_card_widget/modal_new_card_widget";
+@import "view_card_widget/modal_view_card_widget";
+@import "template_publish/modal_template_publish";

@@ -1,0 +1,12 @@
+#kue-builder .--kue-modal.--kue-modal-new-card-widget {
+  top: 386px;
+  left: calc($UI_FIXED_SIDEBAR_WIDTH - 16px);
+  width: 300px;
+
+  .--widgets-add-dropdown {
+      .--kue-b-rich-dropdown {
+        margin-bottom: $u;
+      }
+  }
+
+}

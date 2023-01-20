@@ -1,0 +1,117 @@
+/*== common.scss ==*/
+
+$UI_ANIMATION_SPEED: 0.2s;
+$FORM_INPUT_PADDING: $u_ $U;
+
+$UI_COLOR_PRIMARY: $UI_BRAND_SNOW;
+$UI_COLOR_REVISION_PUBLISHED: #0082f1;
+$UI_COLOR_REVISION_CHANGE: $UI_BRAND_RED;
+$UI_COLOR_REVISION_BRANCHED_NO_CHANGES: #438a34;
+$UI_COLOR_REVISION_BRANCHED_CHANGED: $UI_BRAND_RED;
+
+
+/* == Vanilla (default) theme colors == */
+
+$UI_THEME_LAYER_0_SHADOW: #120e1a;
+$UI_THEME_LAYER_0_BORDER: #120e1a;
+$UI_THEME_LAYER_0_DISABLED: #6a6783;
+$UI_THEME_LAYER_0: #181321;
+$UI_THEME_LAYER_1: #1b1526;
+$UI_THEME_LAYER_1_BORDER: #302642;
+$UI_THEME_LAYER_2: #211a2e;
+$UI_THEME_LAYER_3: #2a213b;
+$UI_THEME_LAYER_4: #2f2542;
+$UI_THEME_LAYER_5: #372b4d;
+$UI_THEME_LAYER_5_BORDER: #403259;
+$UI_THEME_LAYER_5_ICON: #6e6680;
+$UI_THEME_INPUT_BORDER: #4d4268;
+$UI_THEME_INPUT_FOCUS: #403359;
+$UI_THEME_INPUT_FOCUS_BORDER: #70628c;
+$UI_THEME_INPUT_SELECTED: $UI_THEME_LAYER_5;
+$UI_THEME_INPUT_DISABLED: #403359;
+$UI_THEME_INPUT_DISABLED_BACKGROUND: #322745;
+$UI_THEME_INPUT_INVERTED_BACKGROUND: #076f6e;
+$UI_THEME_INPUT_INVERTED_SHADOW: #033534;
+$UI_THEME_INPUT_INVERTED_BORDER: #069f9a;
+$UI_THEME_INPUT_INVERTED_FOCUS: #088180;
+$UI_THEME_INPUT_INVERTED_FOCUS_BORDER: #07b0ab;
+$UI_THEME_TEXT_HIGHLIGHT: #cacaca;
+$UI_THEME_TEXT_NORMAL: #adadad;
+$UI_THEME_TEXT_SECONDARY: #978fa5;
+$UI_THEME_TEXT_DISABLED: #605573;
+$UI_THEME_ICON_DEFAULT: #978fa5;
+$UI_THEME_ICON_DISABLED: #7960a6;
+
+$UI_THEME_BUILDER_CARD_TOP: $UI_THEME_LAYER_5;
+$UI_THEME_BUILDER_CARD_BOTTOM: $UI_THEME_LAYER_4;
+$UI_THEME_BUILDER_CARD_BORDER: $UI_THEME_INPUT_BORDER;
+
+/* Fixed UI settings */
+$UI_FIXED_SIDEBAR_WIDTH: 375px;
+$UI_FIXED_TOOLBAR_WIDTH: 70px;
+
+@mixin UI_Frame() {
+  border: 1px solid $UI_THEME_LAYER_1_BORDER;
+  box-shadow: 1px 1px 0px $UI_THEME_LAYER_0_SHADOW;
+  border-radius: $u;
+}
+
+@mixin UI_Soft_Frame($color:$UI_THEME_LAYER_3, $shadow:$UI_THEME_LAYER_1) {
+  border: 1px solid $color;
+  box-shadow: 1px 1px 0px $shadow;
+  border-radius: $u;
+}
+
+@mixin UI_Input_Font($space) {
+  @include UI_Font(monospace, normal);
+  padding: $FORM_INPUT_PADDING;
+  color: $UI_THEME_TEXT_NORMAL;
+  line-height: $space;
+  font-size: .9em;
+  &:focus {
+    color: $UI_BRAND_SNOW;
+  }
+}
+
+@mixin UI_Input_Frame() {
+  border: 1px solid $UI_THEME_INPUT_BORDER;
+  box-shadow: 1px 1px 0px $UI_THEME_LAYER_2;
+  border-radius: $u;
+  background: $UI_THEME_INPUT_SELECTED;
+  &:focus {
+    background: $UI_THEME_INPUT_FOCUS;
+    border: 1px solid $UI_THEME_INPUT_FOCUS_BORDER;
+    outline: 0;
+    ::selection {
+      color: $UI_BRAND_SNOW;
+    }
+  }
+}
+
+@mixin UI_Input_Frame_Inverted() {
+  border: 1px solid $UI_THEME_INPUT_INVERTED_BORDER;
+  box-shadow: 1px 1px 0px $UI_THEME_INPUT_INVERTED_SHADOW;
+  border-radius: $u;
+  background: $UI_THEME_INPUT_INVERTED_BACKGROUND;
+  &:focus {
+    background: $UI_THEME_INPUT_INVERTED_FOCUS;
+    border: 1px solid $UI_THEME_INPUT_INVERTED_FOCUS_BORDER;
+    outline: 0;
+    ::selection {
+      color: $UI_BRAND_SNOW;
+    }
+  }
+}
+
+@mixin UI_Property_Label() {
+  @include UI_Font(primary, strong);
+  padding-bottom: $_u;
+  font-size: 1em;
+  color: $UI_THEME_TEXT_HIGHLIGHT;
+  display: block;
+  margin-bottom: $_u;
+}
+
+@mixin UI_Frame_pixel_art($direction) {
+  border-#{$direction}: 1px solid $UI_BRAND_SNOW;
+}

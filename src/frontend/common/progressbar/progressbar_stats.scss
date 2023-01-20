@@ -1,0 +1,20 @@
+#kue-builder .--kue-b-progressbar-stats {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+
+  .--time-log {
+    margin-right: $U;
+    .--kue-b-tag:not(:last-child) {
+      margin-right: $u;
+    }
+
+  }
+
+  .--block-stats {
+    .--kue-b-tag:not(:last-child) {
+      margin-right: $u;
+    }
+  }
+
+}

@@ -1,0 +1,15 @@
+#kue-builder .--kue-b-card-widget.--cw-text {
+
+  .--card-input-main {
+    height: 201px;
+
+    .--kue-b-textarea {
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      &:focus {
+        box-shadow: 0 0 7px $UI_BRAND_GLACIER;
+      }
+    }
+  }
+}

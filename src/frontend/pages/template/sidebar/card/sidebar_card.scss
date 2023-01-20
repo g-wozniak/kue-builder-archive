@@ -1,0 +1,49 @@
+#kue-builder .--kue-bs-template-block {
+
+  &-card {}
+
+  &-settings {
+    >:not(:last-child) {
+      margin-bottom: $U;
+      padding-bottom: $U;
+      border-bottom: 1px solid $UI_THEME_INPUT_BORDER;
+    }
+  }
+
+  .--not-selected {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: $Uu $U;
+    border: 1px solid $UI_THEME_LAYER_5;
+    border-radius: $u;
+
+    .--header {
+      @include UI_Font(secondary, bold);
+      font-size: 1.1em;
+      padding: $U 0 $u 0;
+      color: $UI_THEME_TEXT_HIGHLIGHT;
+    }
+
+    .--info {
+      @include UI_Font(secondary, normal);
+      font-size: .85em;
+      text-align: center;
+      color: $UI_THEME_TEXT_SECONDARY;
+      margin-bottom: 0;
+      line-height: 110%;
+    }
+
+    svg {
+      color: $UI_THEME_LAYER_5_ICON;
+      height: 32px;
+    }
+  }
+
+}
+
+@import "_tabs/tabs";
+@import "layout/sidebar_card_layout";
+@import "layout/sidebar_card_layout_select";
+@import "settings/_setting/sidebar_card_setting";

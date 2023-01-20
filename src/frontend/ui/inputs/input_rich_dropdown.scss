@@ -1,0 +1,91 @@
+#kue-builder {
+
+  .--kue-b-dropdown, .--kue-b-rich-dropdown {
+
+    .menu>.item:hover {
+      background: $UI_THEME_LAYER_2;
+    }
+
+    .menu>.selected.item {
+      background: $UI_THEME_LAYER_3;
+    }
+
+    .menu>.item {
+      border-top-color: $UI_THEME_INPUT_BORDER;
+      background: $UI_THEME_LAYER_5;
+    }
+
+    >.dropdown.icon:before {
+      color: $UI_COLOR_PRIMARY;
+    }
+
+    >.search {
+      @include UI_Font(primary, normal);
+      font-size: .9em;
+      color: $UI_COLOR_PRIMARY;
+    }
+
+    .default.text {
+      color: $UI_THEME_TEXT_SECONDARY;
+      font-size: 0.9em;
+    }
+
+    .visible.menu.transition {
+      border-color: $UI_THEME_INPUT_BORDER;
+      border-radius: 0 0 $u $u;
+    }
+
+    .message {
+      color: $UI_THEME_INPUT_BORDER;
+      font-size: .9em;
+      background: $UI_THEME_LAYER_5;
+    }
+
+    .divider.text {
+      color: $UI_THEME_TEXT_SECONDARY;
+    }
+  }
+
+  .--kue-b-rich-dropdown {
+    @include UI_Font(primary, normal);
+    @include UI_Input_Frame();
+    line-height: 100%;
+    font-size: 1em;
+    position: relative;
+
+    &-item {
+      align-items: center;
+      display: flex;
+      justify-content: start;
+
+      .--icon {
+        svg {
+          color: $UI_THEME_LAYER_5_ICON;
+          width: 22px;
+          height: 22px;
+        }
+      }
+
+      .--block {
+        margin-left: $Uu;
+
+        &-label {
+          @include UI_Font(primary, strong);
+          color: $UI_COLOR_PRIMARY;
+          display: block;
+          font-size: .95em;
+        }
+
+        &-description {
+          @include UI_Font(secondary, normal);
+          color: $UI_THEME_TEXT_SECONDARY;
+          display: block;
+          font-size: 0.85em;
+          line-height: 110%;
+          margin-top: $_u;
+        }
+      }
+
+    }
+  }
+}

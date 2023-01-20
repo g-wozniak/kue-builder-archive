@@ -1,0 +1,45 @@
+#kue-builder .--kue-b-card-layout.--layout-two-columns,
+#kue-builder .--kue-b-card-layout.--layout-two-columns-equal {
+
+  .--row-1 {
+    margin-bottom: $u_;
+  }
+
+  .--row-2 {
+    display: flex;
+    align-items: stretch;
+    align-content: stretch;
+
+    > * {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+#kue-builder .--kue-b-card-layout.--layout-two-columns {
+  .--row-2 {
+    > :first-child {
+      width: 35%;
+    }
+
+    > :last-child {
+      margin-left: $u_;
+      flex-grow: 1;
+    }
+  }
+}
+
+#kue-builder .--kue-b-card-layout.--layout-two-columns-equal {
+  .--row-2 {
+    > :first-child {
+      width: 50%;
+      margin-right: $_u;
+    }
+
+    > :last-child {
+      flex-grow: 1;
+      margin-left: $_u;
+    }
+  }
+}

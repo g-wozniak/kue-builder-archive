@@ -1,0 +1,34 @@
+
+#kue-builder {
+  height: 100vh; //%
+  position: relative;
+  background: $UI_THEME_LAYER_2;
+
+  /* Main layout container */
+  #kue-builder-main.--kue-b {
+    margin-left: $UI_FIXED_TOOLBAR_WIDTH;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Generic styles */
+  h1, h2, h3, h4, h5 {
+    @include UI_Font(secondary, bold)
+  }
+
+  ol, ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  ::selection, input::selection, textarea::selection {
+    background: $UI_BRAND_SNOW;
+    color: $UI_BRAND_STORM;
+  }
+
+  button {
+    &:focus, &:focus-visible {
+      outline: 0;
+    }
+  }
+}

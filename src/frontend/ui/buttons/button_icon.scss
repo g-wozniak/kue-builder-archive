@@ -1,0 +1,43 @@
+#kue-builder .--kue-b-button-icon {
+
+  padding: $U;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  svg {
+    @include UI_Effect_Ease_Color();
+    color: $UI_COLOR_PRIMARY;
+    margin: 0 !important;
+  }
+
+  .--caption {
+    @include UI_Font(primary, strong);
+    text-align: center;
+  }
+
+  &:hover svg,
+  &:focus svg,
+  &:hover .--caption,
+  &:focus .--caption {
+    @include UI_Effect_Ease_Color();
+    color: $UI_BRAND_STORM;
+  }
+
+  &.active {
+    .--caption, svg {
+      color: $UI_BRAND_STORM;
+    }
+  }
+
+  &.disabled {
+    .--caption, svg {
+      color: $UI_THEME_LAYER_0_DISABLED !important;
+    }
+  }
+}

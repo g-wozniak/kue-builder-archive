@@ -1,0 +1,82 @@
+/* Single revision listed item */
+#kue-builder .--kue-bs-templates-item {
+  @include UI_Soft_Frame($UI_THEME_INPUT_BORDER);
+  @include UI_Effect_Ease_Color($UI_ANIMATION_SPEED);
+  padding: $U_u;
+  background: $UI_THEME_LAYER_3;
+
+
+  &:not(:first-child) {
+    margin-top: $u_;
+  }
+
+  &.--active {
+    background: $UI_THEME_LAYER_5;
+  }
+
+  &.--active.--changes:not(.--published) .--commit-icon svg {
+    color: $UI_COLOR_REVISION_BRANCHED_CHANGED;
+  }
+
+  &.--published .--commit-icon svg {
+    color: $UI_COLOR_REVISION_PUBLISHED;
+  }
+
+  &.--active .--revision-selector label:before {
+    background-color: $UI_BRAND_GLACIER !important;
+  }
+
+  &.--active .--kue-bs-revisions-revision-info {
+    background: $UI_THEME_LAYER_4;
+  }
+
+  &.--active .--revision-caption {
+    @include UI_Font(primary, strong);
+    color: $UI_BRAND_SNOW;
+  }
+
+  &-frame {
+    display: block;
+    margin-bottom: $u;
+
+    .--template-name {
+      @include UI_Font(primary, bold);
+      color: $UI_THEME_TEXT_HIGHLIGHT;
+      font-size: 1.1em;
+      line-height: 110%;
+      padding-bottom: $u;
+      display: block;
+    }
+
+    .--template-headline {
+      @include UI_Font(secondary, normal);
+      color: $UI_THEME_TEXT_NORMAL;
+      font-size: .9em;
+      line-height: 125%;
+      padding-bottom: $u;
+      display: block;
+    }
+
+    .--created {
+      @include UI_Font(secondary, normal);
+      color: $UI_THEME_TEXT_SECONDARY;
+      font-size: .8em;
+      line-height: 100%;
+      width: 100%;
+      padding-bottom: $u;
+      display: block;
+      svg {
+        padding-right: 3px;
+      }
+    }
+  }
+
+  &-versions {
+    .--list {
+      list-style: none;
+      li:not(:last-child) {
+        border-bottom: 1px dashed $UI_THEME_LAYER_5_BORDER;
+      }
+    }
+  }
+}

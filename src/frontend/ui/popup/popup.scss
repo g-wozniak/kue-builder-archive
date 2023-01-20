@@ -1,0 +1,11 @@
+
+.--kue-b-popup {
+  &.inverted {
+    background-color: $UI_COLOR_PRIMARY;
+  }
+  .content {
+    @include UI_Font(primary, normal);
+    line-height: 125%;
+    font-size: 0.9em;
+  }
+}

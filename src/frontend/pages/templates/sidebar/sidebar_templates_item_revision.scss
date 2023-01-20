@@ -1,0 +1,160 @@
+/* Single revision listed item */
+#kue-builder .--kue-bs-templates-item-revision {
+  padding: $u_ 0;
+  background: $UI_THEME_LAYER_3;
+  border-radius: $u;
+  border: 2px solid transparent;
+
+  &.--active {
+    border: 2px dotted $UI_BRAND_GLACIER;
+    background: $UI_BRAND_GLACIER_DARK;
+
+    .--revision-label {
+      color: $UI_BRAND_SNOW !important;
+    }
+    .--revision-comment {
+      color: $UI_THEME_TEXT_HIGHLIGHT !important;
+    }
+    .--revision-created {
+      color: #4e9d8e !important;
+    }
+    .--revision-id {
+      color: $UI_BRAND_SNOW !important;
+    }
+    .--checkbox {
+      .ui.checkbox label::before {
+        background: $UI_BRAND_GLACIER_DARK;
+      }
+      .ui.checkbox input:checked~label:after {
+        color: $UI_BRAND_GLACIER;
+      }
+      .--revision-blocks {
+        color: $UI_THEME_TEXT_HIGHLIGHT !important;
+      }
+    }
+  }
+
+  &.--disabled:not(.--active) {
+    .--checkbox {
+      .ui.checkbox label::before {
+        border-color: transparent;
+        background: $UI_THEME_LAYER_2;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  &-summary {
+    display: flex;
+    align-items: stretch;
+    align-content: stretch;
+
+    .--checkbox {
+      width: 15%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      .ui.checkbox {
+        min-width: 21px;
+        min-height: 21px;
+        line-height: 21px;
+      }
+
+      .ui.checkbox label::before,
+      .ui.checkbox label::after {
+        width: 21px;
+        height: 21px;
+      }
+
+      .ui.checkbox label::before {
+        border: 1px solid $UI_BRAND_GLACIER;
+        background: $UI_BRAND_GLACIER_DARK;
+      }
+
+      .ui.checkbox input:checked ~ label:after {
+        color: $UI_BRAND_SNOW;
+      }
+
+      .--revision-blocks {
+        @include UI_Font(secondary, normal);
+        color: $UI_THEME_TEXT_SECONDARY;
+        font-size: .8em;
+        display: block;
+        margin-bottom: 3px;
+
+        svg {
+          margin-right: 4px;
+        }
+      }
+    }
+
+    .--label {
+      flex-grow: 1;
+      margin-left: $U;
+      padding-right: $u;
+
+      .--revision-label {
+        @include UI_Font(primary, bold);
+        color: $UI_THEME_TEXT_HIGHLIGHT;
+        font-size: .8em;
+        line-height: 100%;
+        margin-bottom: $_u;
+        display: block;
+      }
+
+      .--revision-comment {
+        @include UI_Font(secondary, normal);
+        color: $UI_THEME_TEXT_NORMAL;
+        font-size: .8em;
+        line-height: 100%;
+        margin-bottom: $u_;
+        display: block;
+      }
+
+      .--details {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .--revision-created {
+          @include UI_Font(secondary, normal);
+          color: $UI_THEME_TEXT_DISABLED;
+          font-size: .8em;
+          line-height: 100%;
+          display: block;
+
+          svg {
+            margin-right: 3px;
+          }
+        }
+
+        .--revision-id {
+          @include UI_Font(secondary, normal);
+          color: $UI_THEME_TEXT_SECONDARY;
+          font-size: .8em;
+          line-height: 100%;
+          display: block;
+          text-transform: uppercase;
+        }
+      }
+
+      .--buttons {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-top: $u;
+        .ui.button:last-child {
+          margin-right: 0;
+        }
+      }
+
+    } // end of label
+
+  } // end of summary
+
+  &-form {
+    padding: $u $u_ 0;
+  }
+
+}

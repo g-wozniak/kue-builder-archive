@@ -1,0 +1,82 @@
+{
+  "name": "@kue-space/builder",
+  "version": "0.3.4",
+  "description": "Pathway template builder for Kue",
+  "main": "dist/.build/app.js",
+  "types": "dist/.build/app.d.ts",
+  "declaration": true,
+  "scripts": {
+    "ci:test": "yarn jest",
+    "build": "./tools/build.sh",
+    "push": "./tools/publish.sh",
+    "dev": "./tools/dev.sh",
+    "test": "yarn jest",
+    "cy": "yarn cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kue-space/kue-builder.git"
+  },
+  "_moduleAliases": {
+    "@c": "src/frontend",
+    "@intf": "src/intf",
+    "@helpers": "src/helpers",
+    "@state": "src/state",
+    "@root": "src"
+  },
+  "author": "Grzegorz Wozniak (greg@woz.dev)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kue-space/kue-builder/issues"
+  },
+  "homepage": "https://github.com/kue-space/kue-builder#readme",
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.3.0",
+    "@types/axios": "^0.14.0",
+    "@types/jest": "^29.2.2",
+    "@types/lodash": "^4.14.188",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.8",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
+    "axios": "0.27.2",
+    "cypress": "^10.4.0",
+    "eslint": "^8.27.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-react": "^7.30.1",
+    "file-loader": "^6.2.0",
+    "html-replace-webpack-plugin": "^2.6.0",
+    "html-webpack-plugin": "^5.5.0",
+    "jest": "^29.2.2",
+    "jest-environment-jsdom": "^29.2.2",
+    "nanoid": "3.3.4",
+    "node-sass": "^7.0.1",
+    "rimraf": "^3.0.2",
+    "sass": "^1.56.0",
+    "sass-loader": "^13.0.2",
+    "ts-jest": "^29.0.3",
+    "ts-loader": "^9.3.1",
+    "tscpaths": "^0.0.9",
+    "typescript": "^4.7.4",
+    "utility-types": "^3.10.0",
+    "webpack": "^5.74.0",
+    "webpack-bundle-analyzer": "^4.6.1",
+    "webpack-cli": "^4.10.0",
+    "webpack-plugin-serve": "^1.6.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-common-types": "^6.2.0",
+    "@fortawesome/fontawesome-pro": "^6.2.0",
+    "@fortawesome/fontawesome-svg-core": "^6.2.0",
+    "@fortawesome/pro-light-svg-icons": "^6.2.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@kue-space/common": "^1.0.45",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-flow-renderer": "^10.3.14",
+    "semantic-ui-react": "^2.1.3"
+  }
+}

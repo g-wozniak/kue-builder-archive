@@ -1,0 +1,27 @@
+.--kue-b-dimmer {
+  height: 100%;
+
+  .--loader {
+
+    .loader {
+      top: 42% !important;
+    }
+
+    &-info {
+      margin-top: 10px;
+
+      >.--header {
+        @include UI_Font(primary, bold);
+        font-size: 1.8em;
+        display: block;
+        margin-bottom: $Uu;
+      }
+
+      >.--subheader {
+        @include UI_Font(primary, normal);
+        font-size: 1.2em;
+        display: block;
+      }
+    }
+  }
+}

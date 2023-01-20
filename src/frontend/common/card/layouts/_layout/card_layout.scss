@@ -1,0 +1,41 @@
+#kue-builder .--kue-b-card-layout {
+  border-radius: 3px;
+  background: $UI_THEME_LAYER_4;
+
+  .--widget-slot {
+    border: 1px solid $UI_THEME_LAYER_1;
+    box-shadow: 2px 2px 0 $UI_THEME_LAYER_3;
+    background: $UI_THEME_LAYER_5;
+    border-radius: 3px;
+    padding: $u;
+    min-height: 60px;
+
+    &.--preview {
+
+      .--kue-b-button-icon {
+        flex-direction: column;
+        svg {
+          font-size: 1.4em;
+        }
+        .--caption {
+          color: $UI_THEME_TEXT_HIGHLIGHT;
+          font-weight: 400;
+          margin-top: $u;
+          font-size: .85em;
+        }
+      }
+    }
+
+    .--kue-b-button-icon:hover,
+    .--kue-b-button-icon:focus {
+      svg, .--caption {
+        color: $UI_BRAND_GLACIER;
+      }
+    }
+
+    &.--empty .--kue-b-button-icon svg {
+      font-size: 1.8em;
+    }
+  }
+
+}

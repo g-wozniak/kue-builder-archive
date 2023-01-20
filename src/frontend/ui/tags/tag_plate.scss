@@ -1,0 +1,21 @@
+#kue-builder .--kue-b-tag {
+
+  &.--plate {
+    @include UI_Soft_Frame();
+    @include UI_Gradient(0deg, $UI_THEME_LAYER_2, $UI_THEME_LAYER_4);
+
+    svg, span {
+      color: $UI_THEME_TEXT_SECONDARY;
+    }
+
+    span {
+      font-size: .8em;
+      margin-left: 3px;
+    }
+    svg {
+      font-size: .9em;
+    }
+
+  }
+
+}

@@ -1,0 +1,63 @@
+/* Custom branding for the blocks */
+
+@mixin Block_Branding($slug, $cardType, $color, $colorLight, $colorDark) {
+
+  /* Card itself */
+  #kue-builder .--kue-bb.--kue-bb--#{$slug} {
+    .--kue-bb-header {
+      .--title,
+      .--icon > svg {
+        color: $color;
+      }
+    }
+
+    &.--selected {
+      box-shadow: 0px 0px 40px $color;
+      border: 1px solid $colorDark;
+
+      .--title,
+      .--icon > svg {
+        color: $colorLight !important;
+      }
+
+      .--text {
+        color: $UI_COLOR_PRIMARY;
+      }
+    }
+  }
+
+  /* Rich dropdown */
+  #kue-builder .--kue-b-rich-dropdown-item.--card_#{$slug} {
+    .--block-label {
+      color: $color;
+    }
+
+    .--icon {
+      svg {
+        color: $color;
+      }
+    }
+  }
+
+  /* New block pane */
+  #kue-builder .--kue-b-button-pane.--block-#{$slug} {
+    .--header, .--header-icon svg {
+      color: $color;
+    }
+  }
+
+  /* Block handle dot */
+  #kue-builder .react-flow__node-#{$cardType} .react-flow__handle {
+    background: $color;
+  }
+
+  /* Icon in the tracker */
+  #kue-builder .--kue-b-tag.--plate.--block-#{$cardType} svg {
+    color: $color;
+  }
+}
+
+@include Block_Branding('goal', 'CARD_GOAL', $UI_CARD_GOAL_COLOR, $UI_CARD_GOAL_COLOR_LIGHT, $UI_CARD_GOAL_COLOR_DARK);
+@include Block_Branding('category', 'CARD_CATEGORY', $UI_CARD_CATEGORY_COLOR, $UI_CARD_CATEGORY_COLOR_LIGHT, $UI_CARD_CATEGORY_COLOR_DARK);
+@include Block_Branding('skill', 'CARD_SKILL', $UI_CARD_SKILL_COLOR, $UI_CARD_SKILL_COLOR_LIGHT, $UI_CARD_SKILL_COLOR_DARK);
+@include Block_Branding('task', 'CARD_TASK', $UI_CARD_TASK_COLOR, $UI_CARD_TASK_COLOR_LIGHT, $UI_CARD_TASK_COLOR_DARK);

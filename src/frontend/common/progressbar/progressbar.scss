@@ -1,0 +1,29 @@
+#kue-builder .--kue-b-progressbar {
+  @include UI_Frame();
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-left: $UU;
+  z-index: 5;
+  background: $UI_THEME_LAYER_2;
+  padding: $u_;
+  border-radius: 0 0 $u $u;
+  min-width: 570px;
+  line-height: 100%;
+
+  &-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $u;
+  }
+
+  &-footer {
+    padding-top: $u;
+    border-top: 1px solid $UI_THEME_LAYER_4;
+  }
+}
+
+@import "progressbar_version.scss";
+@import "progressbar_buttons.scss";
+@import "progressbar_stats.scss";

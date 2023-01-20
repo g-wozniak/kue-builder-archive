@@ -1,0 +1,29 @@
+#kue-builder {
+  .--form-inverted .--kue-b-textarea {
+    @include UI_Input_Frame_Inverted();
+    font-size: .85em;
+    &:focus::placeholder {
+      color: $UI_BRAND_SNOW;
+    }
+    &::placeholder {
+      color: $UI_BRAND_GLACIER;
+    }
+  }
+
+  .--kue-b-textarea {
+    @include UI_Input_Frame();
+    @include UI_Input_Font(115%);
+    width: 100%;
+    min-height: 75px;
+    padding: $FORM_INPUT_PADDING;
+
+    &.--large {
+      min-height: 200px;
+    }
+
+    &.--error {
+      background-color: #fff6f6;
+    }
+  }
+
+}

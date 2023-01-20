@@ -1,0 +1,10 @@
+#kue-builder .--kue-b-tracker-version .--kue-b-tag.--steps {
+  background: $UI_COLOR_REVISION_CHANGE;
+  color: $UI_BRAND_SNOW;
+}
+
+#kue-builder .--kue-b-tag {
+  &.--steps {
+
+  }
+}

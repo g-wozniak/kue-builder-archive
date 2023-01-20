@@ -1,0 +1,11 @@
+#kue-builder .--kue-b-card-layout.--layout-single {
+
+  .--widget-slot {
+
+    &:not(:last-child) {
+      margin-bottom: $u_;
+    }
+
+  }
+
+}

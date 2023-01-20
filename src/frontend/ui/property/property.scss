@@ -1,0 +1,29 @@
+#kue-builder .--kue-b-property {
+
+  .--label {
+    @include UI_Property_Label();
+  }
+
+  > div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: $u;
+  }
+
+  .--key {
+    @include UI_Font(monospace, normal);
+    color: $UI_THEME_INPUT_BORDER;
+    display: block;
+    font-size: 0.9em;
+  }
+
+  .--value {
+    @include UI_Font(monospace, normal);
+    padding: 0 $u;
+    margin-left: 4px;
+    font-size: 0.9em;
+    color: $UI_COLOR_PRIMARY;
+    background: $UI_THEME_LAYER_4;
+  }
+}

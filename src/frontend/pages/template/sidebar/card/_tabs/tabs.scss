@@ -1,0 +1,38 @@
+$TAB_BORDER_COLOR: $UI_THEME_LAYER_5;
+
+#kue-builder .--kue-bs-tabs {
+
+  .ui.attached.tabular.menu {
+    border-bottom: 1px solid $TAB_BORDER_COLOR;
+  }
+
+  .ui.attached.tabular.menu .item {
+    @include UI_Effect_Ease_Color();
+    @include UI_Font(primary, normal);
+    color: $UI_THEME_TEXT_SECONDARY;
+    font-size: 1em;
+    border-bottom: 1px solid $TAB_BORDER_COLOR;
+    &:hover, &:focus {
+      color: $UI_BRAND_SNOW;
+      background: $UI_THEME_LAYER_5;
+    }
+  }
+
+  .ui.attached.tabular.menu .item.active {
+    @include UI_Font(primary, strong);
+    background: $UI_THEME_LAYER_5;
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    color: $UI_BRAND_GLACIER;
+    font-size: 1em;
+  }
+
+  .--kue-bs-tab {
+    background: transparent;
+    border-top: 3px solid $TAB_BORDER_COLOR;
+    border-bottom: 3px solid $TAB_BORDER_COLOR;
+    border-left: 3px solid $TAB_BORDER_COLOR;
+    border-right: 3px solid $TAB_BORDER_COLOR;
+  }
+}

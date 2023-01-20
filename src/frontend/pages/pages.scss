@@ -1,0 +1,19 @@
+#kue-builder .--kue-b--layout {
+   display: flex;
+
+   .--kue-bs {
+      width: $UI_FIXED_SIDEBAR_WIDTH;
+      height: 100vh;
+   }
+
+   .--kue-bf {
+      position: relative;
+      flex-grow: 1;
+   }
+}
+
+@import "template/sidebar/card/sidebar_card";
+@import "template/sidebar/search/sidebar_search";
+@import "templates/sidebar/sidebar_templates_item";
+@import "templates/sidebar/sidebar_templates_item_revision";
+@import "settings/sidebar/sidebar_settings";

@@ -1,0 +1,58 @@
+
+#kue-builder-toolbar.--kue-bt {
+  width: $UI_FIXED_TOOLBAR_WIDTH;
+  background: $UI_THEME_LAYER_2;
+  padding: $U 0 $U 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  height: 100%;
+
+  .--kue-bt-nav {
+
+    ol {
+      list-style-type: none;
+      li {
+        margin: $u_;
+      }
+    }
+
+    &-item .--kue-b-button-icon {
+      @include UI_Effect_Ease_Color($UI_ANIMATION_SPEED);
+      background: $UI_THEME_LAYER_2;
+      border-color: transparent;
+      border-radius: $_u;
+      svg {
+        height: 21px;
+        color: $UI_BRAND_SNOW;
+      }
+
+      &:hover,
+      &:focus {
+        svg {
+          color: $UI_BRAND_GLACIER;
+        }
+      }
+
+      &.active {
+        background-color: $UI_BRAND_GLACIER;
+        svg {
+          color: $UI_BRAND_BLACK;
+        }
+      }
+
+    }
+
+    &-item.--logo {
+      margin-top: $u !important;
+      margin-bottom: $Uu !important;
+      text-align: center;
+      > svg {
+        margin: 0 auto;
+      }
+    }
+
+  }
+
+}

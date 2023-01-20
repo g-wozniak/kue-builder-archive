@@ -1,0 +1,8 @@
+node_modules
+cypress
+dist/.local
+dist/.build
+.npmrc
+.coverage
+yarn-error.log
+.idea

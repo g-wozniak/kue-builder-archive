@@ -1,0 +1,39 @@
+#kue-builder .--kue-b-button-pane {
+  @include UI_Soft_Frame($UI_THEME_LAYER_5_BORDER, $UI_THEME_LAYER_2);
+  margin-bottom: $u;
+  padding: $u_ $U;
+  background: $UI_THEME_LAYER_5;
+
+  &:hover, &:focus {
+    @include UI_Soft_Frame($UI_THEME_LAYER_0, $UI_THEME_LAYER_2);
+    background: $UI_THEME_LAYER_2;
+  }
+
+  .--header {
+    @include UI_Font(primary, strong);
+    font-size: 1em;
+    text-transform: uppercase;
+    color: $UI_COLOR_PRIMARY;
+    align-items: center;
+    display: flex;
+    justify-content: start;
+    margin-bottom: $u;
+
+    &-icon {
+      padding-right: $u;
+      > svg {
+        color: $UI_THEME_LAYER_5_ICON;
+        font-size: 1.6em;
+      }
+    }
+  }
+
+  .--description {
+    @include UI_Font(secondary, normal);
+    text-align: left;
+    color: $UI_THEME_TEXT_SECONDARY;
+    font-size: .85em;
+    line-height: 125%;
+    display: block;
+  }
+}

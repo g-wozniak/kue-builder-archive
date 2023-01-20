@@ -1,0 +1,72 @@
+
+#kue-builder {
+
+  .--kue-form {
+    line-height: 100%;
+
+    &.--form-bordered {
+      @include UI_Frame();
+      width: 100%;
+      padding: $u;
+      background: $UI_THEME_LAYER_5;
+      margin: $u 0 0 0;
+    }
+
+    &-body {
+      .ui.input {
+        margin-bottom: $u
+      }
+
+      .--chunk {
+        display: block;
+        margin-bottom: $U;
+
+        &:last-child {
+          margin-bottom: $u;
+        }
+
+        .--caption {
+          @include UI_Font(secondary, bold);
+          color: $UI_COLOR_PRIMARY;
+          font-size: 1em;
+          display: block;
+          margin-bottom: $u;
+          padding-bottom: $u;
+          border-bottom: 1px dotted $UI_THEME_INPUT_BORDER;
+        }
+
+        .--hint {
+          @include UI_Font(secondary, normal);
+          line-height: 125%;
+          font-size: 1em;
+          color: $UI_THEME_TEXT_NORMAL;
+        }
+
+        .--kue-b-tag {
+          display: block;
+          margin-top: $_u;
+          width: fit-content;
+        }
+
+      }
+
+    }
+
+    &-footer {
+      padding-top: $u;
+      padding-bottom: $u;
+      align-items: center;
+      display: flex;
+      justify-content: end;
+
+      > :not(:first-child) {
+        margin-left: $u !important;
+      }
+
+      > :last-child {
+        margin-right: 0 !important;
+      }
+    }
+
+  }
+}

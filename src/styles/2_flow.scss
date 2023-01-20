@@ -1,0 +1,102 @@
+/** Kue builder flow **/
+#kue-builder .--kue-b {
+
+  .react-flow {
+    background: $UI_THEME_LAYER_0;
+    &__background {
+      background-color: $UI_THEME_LAYER_5;
+    }
+
+    &__attribution {
+      z-index: 5 !important;
+    }
+
+    &__handle {
+      border-radius: 50%;
+      border: none;
+      background: $UI_COLOR_PRIMARY;
+      width: 18px;
+      height: 18px;
+      z-index: 10;
+
+      &-right {
+        right: -18px;
+      }
+
+      &-left {
+        left: -18px;
+      }
+    }
+
+    &__edge {
+      &-path {
+        stroke: $UI_THEME_INPUT_BORDER;
+        stroke-width: 1;
+      }
+    }
+
+    &__edge.selected &__edge-path {
+      stroke: $UI_BRAND_GLACIER;
+      stroke-width: 2;
+    }
+
+    &__controls {
+      left: 240px;
+      right: unset;
+      bottom: 32px;
+
+      &-button {
+        @include UI_Effect_Ease_Color();
+        @include UI_Frame();
+        padding: $u;
+
+        &:not(:last-child) {
+          margin-bottom: $_u;
+        }
+
+        background: $UI_THEME_LAYER_4;
+        &:hover, &:focus {
+          border-color: $UI_THEME_LAYER_2;
+          box-shadow: 0 0 10px $UI_BRAND_STORM;
+          svg {
+            filter: invert(.9);
+          }
+        }
+
+        svg {
+          filter: invert(.6);
+        }
+      }
+    }
+
+    &__attribution {
+      background: transparent;
+    }
+
+    &__minimap {
+      @include UI_Frame();
+      border: 1px solid $UI_THEME_LAYER_0_BORDER;
+      background-color: $UI_THEME_LAYER_2 !important;
+      left: 25px;
+      right: 0;
+      bottom: 32px;
+    }
+  }
+
+
+  /* Generic styles */
+  h1, h2, h3, h4, h5 {
+    @include UI_Font(secondary, bold)
+  }
+
+  ol, ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  ::selection, input::selection, textarea::selection {
+    background: $UI_BRAND_SNOW;
+    color: $UI_BRAND_STORM;
+  }
+
+}

@@ -1,0 +1,32 @@
+#kue-builder .--kue-bs-template-block-settings-property {
+
+  .--label {
+    @include UI_Property_Label();
+  }
+
+  &.--change-link {
+
+    .--vw-b-rich-dropdown {
+      margin: $u 0 $u 0;
+    }
+
+  }
+
+  &.--delete {
+
+    .--text {
+      @include UI_Font(secondary, normal);
+      line-height: 125%;
+      display: block;
+      font-size: .85em;
+      color: $UI_THEME_INPUT_BORDER;
+      margin-bottom: $u;
+      margin-top: $u;
+      strong {
+        color: $UI_BRAND_RED;
+        font-weight: 700;
+      }
+    }
+  }
+
+}

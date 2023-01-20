@@ -1,0 +1,57 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "baseUrl": ".",
+    "outDir": "dist/.build",
+    "sourceMap": true,
+    "inlineSourceMap": false,
+    "allowJs": true,
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "types": ["jest", "@testing-library/jest-dom"],
+    "noEmitOnError": false,
+    "noImplicitAny": false,
+    "importHelpers": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": false,
+    "inlineSources": false,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "paths": {
+      "@root/*": ["src/*"],
+      "@intf/*": ["src/intf/*"],
+      "@helpers/*": ["src/helpers/*"],
+      "@state/*": ["src/state/*"],
+      "@frontend/*": ["src/frontend/*"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "tools",
+    "jest.*.js",
+    ".coverage",
+    "*.config.ts",
+    "*.config.js",
+    "webpack.*.js"
+  ]
+}

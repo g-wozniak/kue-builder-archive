@@ -1,0 +1,112 @@
+
+#kue-builder .--kue-b-window {
+
+  &:not(.--modal) {
+    margin-top: $Uu;
+    padding-bottom: $u;
+  }
+
+  &.--modal {
+    box-shadow: 2px 2px 16px $UI_THEME_LAYER_0_SHADOW;
+  }
+
+  border: none;
+  border-radius: $u;
+  background: $UI_THEME_LAYER_4;
+
+
+
+  &-header {
+    margin-left: $Uu;
+    align-items: center;
+    display: flex;
+    justify-content: start;
+    height: 80px;
+
+    > :not(:first-child) {
+      border-left: 1px solid $UI_THEME_INPUT_BORDER;
+    }
+
+    .--caption {
+      padding: $U_u 0 $U 0;
+      flex-grow: 1;
+      align-items: center;
+      display: flex;
+      justify-content: flex-start;
+
+      &-text {
+        @include UI_Font(primary, strong);
+        font-size: 1.2em;
+        margin-bottom: 3px;
+        color: $UI_BRAND_SNOW;
+      }
+
+      &-icon {
+        margin-right: $u_;
+        svg {
+          color: $UI_THEME_LAYER_5_ICON;
+          font-size: 1.4em;
+        }
+      }
+
+      &.--no-icons {
+        border-right: none;
+      }
+    }
+
+    .--button {
+      padding: 0;
+      display: grid;
+      align-items: center;
+
+      .--kue-b-button-icon {
+        padding: 0;
+        font-size: 1em;
+        &.disabled svg {
+          color: $UI_THEME_ICON_DISABLED;
+        }
+      }
+
+      >.--inner {
+        padding: $u;
+        margin: 0 $u_;
+        border-radius: $u;
+      }
+
+      .--kue-b-button-icon.active svg {
+        color: $UI_BRAND_STORM;
+      }
+
+      svg {
+        font-size: 1.6em;
+        color: $UI_BRAND_SNOW;
+        &:hover, &:focus {
+          color: $UI_BRAND_GLACIER;
+        }
+      }
+    }
+
+  }
+
+  &-body {
+    border-color: transparent;
+    margin: 0 $u_ $u_ $u_;
+    padding: 0 $u $u $u;
+
+    .--text {
+      @include UI_Font(secondary, normal);
+      line-height: 125%;
+      display: block;
+      font-size: 1em;
+      margin-bottom: $Uu;
+      color: $UI_THEME_TEXT_SECONDARY;
+
+      &.--strong {
+        @include UI_Font(primary, strong);
+        color: $UI_COLOR_PRIMARY;
+        font-size: 1em;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,25 @@
+#kue-builder .--kue-b-card-layout.--layout-two-rows {
+
+  display: flex;
+  align-items: stretch;
+
+  .--column-1 {
+    display: flex;
+    align-content: stretch;
+    max-width: 40%;
+
+    > * {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .--column-2 {
+    margin-left: $u_;
+    flex-grow: 1;
+
+    > :not(:last-child) {
+      margin-bottom: $u_;
+    }
+  }
+}

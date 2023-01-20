@@ -1,0 +1,158 @@
+#kue-builder .--kue-bs-templates-item-revision.--active,
+#kue-builder .--form-inverted {
+   .--kue-b-button-classic.ui.button {
+      box-shadow: 2px 2px 0 $UI_THEME_INPUT_INVERTED_SHADOW;
+
+      &.disabled {
+        box-shadow: none;
+         border: 1px solid $UI_THEME_INPUT_INVERTED_SHADOW !important;
+         background: #0d6261 !important;
+
+         .--icon svg {
+            color: $UI_THEME_INPUT_INVERTED_SHADOW !important;
+         }
+
+         .--caption {
+            color: $UI_THEME_INPUT_INVERTED_SHADOW !important;
+         }
+      }
+   }
+}
+
+#kue-builder .--kue-b-button-classic {
+   align-items: center;
+   display: flex;
+   justify-content: center;
+
+   &.ui.button {
+      @include UI_Effect_Ease_Color();
+      background: $UI_BRAND_GLACIER;
+      box-shadow: 2px 2px 0 $UI_THEME_LAYER_3;
+      border: 1px solid $UI_BRAND_GLACIER_LIGHT;
+      border-radius: $u;
+      padding: $u;
+      min-width: 95px;
+
+      &.--small {
+         padding: 5px 0;
+
+         .--caption {
+            font-size: .8em;
+         }
+      }
+
+      &.disabled {
+         opacity: 1 !important;
+         border: 1px solid $UI_THEME_INPUT_DISABLED !important;
+         background: $UI_THEME_INPUT_DISABLED_BACKGROUND !important;
+
+         .--icon svg {
+            color: $UI_THEME_INPUT_DISABLED !important;
+         }
+
+         .--caption {
+            color: $UI_THEME_INPUT_DISABLED !important;
+            text-shadow: none !important;
+         }
+      }
+
+      &.loading {
+         > i, > span {
+            font-size: 0;
+         }
+
+         box-shadow: none;
+         opacity: 0.8;
+      }
+
+      .--icon {
+         margin-right: 4px;
+
+         svg {
+            color: $UI_BRAND_BLACK;
+            font-size: 1em;
+            // -webkit-filter: drop-shadow(1px 1px 0px $UNDEF_TERTIARY_SOLID);
+            // filter: drop-shadow(1px 1px 0px $UNDEF_TERTIARY_SOLID);
+         }
+      }
+
+      .--caption {
+         @include UI_Font(primary, strong);
+         color: $UI_BRAND_BLACK;
+         font-size: 0.9em;
+      }
+
+      /** Hover and different roles **/
+
+      &.--cancel {
+         border: 1px solid #babcce;
+         background: #9a9cac;
+
+         .--caption {
+            text-shadow: 1px 1px #babcce;
+         }
+
+         &:hover, &:focus {
+            background: #babcce;
+            border: 1px solid #cfd1e1;
+         }
+
+         &:active {
+            background: #6f717f;
+            border: 1px solid #a7aeb5;
+
+            .--caption {
+               text-shadow: 1px 1px #9a9cac;
+            }
+         }
+      }
+
+      &.--publish {
+         border: 1px solid #5eb4ff;
+         background: #3ea6ff;
+
+         .--caption {
+            text-shadow: 1px 1px #72bdff;
+         }
+
+         &:hover, &:focus {
+            background: #72bdff;
+            border: 1px solid #87c9ff;
+         }
+
+         &:active {
+            background: $UI_COLOR_REVISION_PUBLISHED;
+            border: 1px solid #5eb4ff;
+         }
+      }
+
+      &.--critical {
+         border: 1px solid $UI_BRAND_RED_BRIGHT;
+         background: $UI_BRAND_RED_LIGHT;
+
+         .--caption {
+            text-shadow: 1px 1px $UI_BRAND_RED_BRIGHT;
+         }
+
+         &:hover, &:focus {
+            background: $UI_BRAND_RED_BRIGHT;
+            border: 1px solid #ffc8ca;
+         }
+
+         &:active {
+            background: $UI_BRAND_RED;
+            border: 1px solid $UI_BRAND_RED_LIGHT;
+         }
+      }
+
+      &:hover, &:focus {
+         background: $UI_BRAND_GLACIER_LIGHT;
+      }
+
+      &:active, &.active {
+         border: 1px solid #32e6e1;
+         background: #00a7a2;
+         text-shadow: 1px 1px #11efe8;
+      }
+   }
+}

@@ -1,0 +1,11 @@
+#kue-builder {
+
+  .--kue-b-textbox {
+
+    input {
+      @include UI_Input_Font(100%);
+      @include UI_Input_Frame();
+    }
+  }
+
+}

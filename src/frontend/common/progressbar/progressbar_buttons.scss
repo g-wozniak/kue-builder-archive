@@ -1,0 +1,67 @@
+#kue-builder .--kue-b-progressbar-buttons {
+  margin-left: $Uu;
+
+  .--nav {
+    list-style: none;
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+
+    > li:not(:last-child) {
+      margin-right: $u;
+    }
+
+    .--kue-b-button-icon {
+      @include UI_Effect_Ease_Color(.3s);
+      @include UI_Soft_Frame();
+      flex-direction: column;
+      padding: $u;
+      min-width: 60px;
+      background: $UI_THEME_LAYER_5_BORDER;
+      border-color: $UI_THEME_INPUT_BORDER;
+
+      &:hover,
+      &:focus {
+        background: $UI_BRAND_GLACIER;
+        .--caption, svg {
+          color: $UI_THEME_LAYER_0_SHADOW;
+        }
+      }
+
+      &:active, .active {
+        background: $UI_BRAND_GLACIER_LIGHT;
+        border-color: $UI_THEME_LAYER_1_BORDER;
+      }
+
+      .--caption, svg {
+        display: block;
+        color: $UI_BRAND_SNOW;
+      }
+
+      .--caption {
+        @include UI_Effect_Ease_Color(.3s);
+        @include UI_Font(secondary, normal);
+        text-transform: uppercase;
+        margin-top: $_u;
+        font-size: .7em;
+      }
+
+      &.disabled {
+        border: 1px solid $UI_THEME_LAYER_5_BORDER;
+        background: $UI_THEME_LAYER_3;
+      }
+
+      &.disabled .--caption {
+        text-shadow: unset;
+        color: $UI_THEME_TEXT_DISABLED;
+      }
+
+      &.disabled svg {
+        color: $UI_THEME_TEXT_DISABLED;
+        filter: unset;
+      }
+
+    }
+  }
+
+}

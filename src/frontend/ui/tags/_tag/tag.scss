@@ -1,0 +1,31 @@
+#kue-builder .--kue-b-tag {
+  box-shadow: 1px 1px 0px $UI_THEME_LAYER_1;
+  border-radius: $u;
+  line-height: 100%;
+  background: $UI_BRAND_STORM;
+  padding: 4px 8px;
+  display: inline-block;
+  color: $UI_THEME_LAYER_0;
+
+  > div {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  svg {
+    font-size: 1.2em;
+    padding-right: 5px;
+  }
+
+  span {
+    @include UI_Font(monospace, normal);
+    font-size: 0.9em;
+  }
+
+  &.--disabled {
+    background: $UI_THEME_LAYER_5 !important;
+    color: $UI_THEME_TEXT_HIGHLIGHT;
+  }
+
+}

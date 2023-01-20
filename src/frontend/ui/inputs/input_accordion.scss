@@ -1,0 +1,61 @@
+#kue-builder {
+
+  .--kue-b-input-accordion {
+    margin-bottom: $_u;
+
+    &-header {
+      /*background: $UI_THEME_LAYER_4;*/
+      padding: 4px;
+      align-items: center;
+      display: flex;
+      justify-content: start;
+      margin-bottom: 0;
+      position: relative;
+
+      .--buttons {
+
+        .--accordion,
+        .--undo {
+          padding: $_u;
+          margin: 0;
+          color: $UI_THEME_TEXT_HIGHLIGHT;
+          background: none;
+
+          > i {
+            font-size: 0.8em;
+          }
+        }
+      }
+
+      > label {
+        @include UI_Font(primary, strong);
+        color: $UI_THEME_TEXT_HIGHLIGHT;
+        cursor: pointer;
+        display: block;
+        flex-grow: 1;
+        font-size: 1em;
+
+      }
+    }
+
+    &-body {
+      padding-bottom: $u;
+      margin: 0 4px $u 4px;
+
+      .--input {
+
+      }
+
+      .--description {
+        @include UI_Font(secondary, normal);
+        color: $UI_THEME_TEXT_SECONDARY;
+        display: block;
+        line-height: 125%;
+        margin-bottom: $u;
+        font-size: 0.9em;
+      }
+
+    }
+
+  }
+}
